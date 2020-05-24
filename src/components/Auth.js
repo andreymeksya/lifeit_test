@@ -36,10 +36,10 @@ class Auth extends React.Component{
 
     render() {
         return (
-            <form onSubmit={this.onSubmit}>
+            <form className="classForm" onSubmit={this.onSubmit}>
                 <input type='text' name='email' onChange={this.onChange} value={this.state.email}/>
                 <input type='password' name='password' onChange={this.onChange} value={this.state.password}/>
-                <button type="submit">Кнопка</button>
+                <button type="submit">Войти</button>
             </form>
         )
     }

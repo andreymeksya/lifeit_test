@@ -38,10 +38,11 @@ loadContent = () => {
   }
 }
 
-
 onScroll = (event) => {
-  const scrollBottom = Math.floor((event.target.scrollTop + event.target.offsetHeight)/10) == Math.floor(event.target.scrollHeight/10);
-    if (scrollBottom) {
+  const scrollBottom = Math.floor((event.target.scrollTop + event.target.offsetHeight)/10)-1 < Math.floor(event.target.scrollHeight/10) && Math.floor((event.target.scrollTop + event.target.offsetHeight)/10)+1 > Math.floor(event.target.scrollHeight/10);
+    console.log(event.target.scrollTop + event.target.offsetHeight)
+    console.log(event.target.scrollHeight)
+  if (scrollBottom) {
       this.loadContent()
     }
 }
@@ -137,16 +138,16 @@ onDelete = (id) => {
     );
 
     return (
-      <div className="container-fluid" style={{height: '100vh', overflow: 'scroll'}}  onScroll={this.onScroll}>
+      <div style={{height: '100vh', overflow: 'scroll'}}  onScroll={this.onScroll}>
       <div className="blockDiv">    
       <button className="btn btn-secondary float-right" onClick={this.onLogOut}>Выход</button>
-        <form onSubmit={this.onSubmit}>
-          <h3 className='Header pt-5' >Создать нового пользователя</h3>
-          <input type='text' name='name' onChange={this.onChange} value={this.state.name}/>
-          <input type='text' name='job' onChange={this.onChange} value={this.state.job}/>
+        <form className="for"  onSubmit={this.onSubmit}>
+          <h3 className='headerForm  pt-5' >Создать нового пользователя</h3>
+          <input className="inp" type='text' name='name' onChange={this.onChange} value={this.state.name}/>
+          <input className="inp" type='text' name='job' onChange={this.onChange} value={this.state.job}/>
           <button className="btn btn-info" type="submit">Добавить</button>
         </form>
-        <h3 className='Header'>Список пользователей</h3>
+        <h3 className='header'>Список пользователей</h3>
         <div onScroll={this.onScroll}>
         {listItems}
         </div>

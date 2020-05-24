@@ -15,6 +15,7 @@
   width: 1000px;
   margin: 0 auto;
 }
+
 .blockUser {
   margin: 20px;
   border: 1px solid grey;
@@ -25,10 +26,38 @@
   margin-left: 30px;
 }
 
-.Header {
+.headerForm {
   margin-top: 40px;
+  margin-left: 50px;
+}
+
+.header {
+  margin-left: 330px;
+  margin-top: 50px;
 }
 
 .btnElse {
   margin-right: 20px;
+  width: 134px;
+}
+.classForm{
+  margin: 0 auto;
+  width: 450px;
+  margin-top: 50px;
+}
+
+.elemBlock{
+  margin: 10px;
+}
+
+.mt-31 {
+  margin-top: 0.6rem!important;
+}
+
+.inp{
+  width: 200px;
+}
+
+.for{
+  margin-left: calc((100% - 500px)/2);
 }
