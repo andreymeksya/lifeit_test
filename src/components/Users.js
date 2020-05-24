@@ -39,9 +39,11 @@ loadContent = () => {
 }
 
 onScroll = (event) => {
-  const scrollBottom = Math.floor((event.target.scrollTop + event.target.offsetHeight)/10)-1 < Math.floor(event.target.scrollHeight/10) && Math.floor((event.target.scrollTop + event.target.offsetHeight)/10)+1 > Math.floor(event.target.scrollHeight/10);
-    console.log(event.target.scrollTop + event.target.offsetHeight)
-    console.log(event.target.scrollHeight)
+  const scrollBottom = Math.floor((event.target.scrollTop + event.target.offsetHeight)/10)-1
+   < Math.floor(event.target.scrollHeight/10) && 
+   Math.floor((event.target.scrollTop + event.target.offsetHeight)/10)+1 
+   > Math.floor(event.target.scrollHeight/10);
+ 
   if (scrollBottom) {
       this.loadContent()
     }
