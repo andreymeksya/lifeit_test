@@ -7,18 +7,18 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/style.css'
 import Auth from './components/Auth'
-import Users from './components/Users'
+import Users from './components/Users' 
 
 
 
 function App() {
-  return (
+  return ( 
     <div className="App"
     >
       <Router>
         <Switch>    
-          <Route exact path='/' component={Auth}/>
-          <Route exact path='/users' component={Users}/>
+           <Route exact path='/' component={Auth}/>
+           <Route exact path='/users' component={Users}/>
         </Switch>
       </Router>
     </div>
